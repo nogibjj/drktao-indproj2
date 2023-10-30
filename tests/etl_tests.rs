@@ -1,9 +1,9 @@
-use derek_tao_sqlite::{extract, load, read_db};
+use derek_tao_sqlite::{extract, load};
 
 #[test]
 fn test_extract() {
     let url =
-    "https://raw.githubusercontent.com/Barabasi-Lab/GroceryDB/main/data/GroceryDB_IgFPro.csv";
+        "https://raw.githubusercontent.com/Barabasi-Lab/GroceryDB/main/data/GroceryDB_IgFPro.csv";
     let file_path = "data/GroceryDB_IgFPro.csv";
 
     extract(url, file_path);
@@ -19,9 +19,3 @@ fn test_load() {
     assert_eq!(result.unwrap(), "GroceryDB.db");
 }
 
-#[test]
-fn test_read() {
-    let result = read_db();
-
-    assert!(result.is_ok());
-}

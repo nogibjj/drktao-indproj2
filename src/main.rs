@@ -1,7 +1,8 @@
-use derek_tao_sqlite::{extract, load, read_db, create_db, update_db, delete_tb};
+use derek_tao_sqlite::{create_db, delete_tb, extract, load, read_db, update_db};
 use rusqlite::Connection;
 fn main() {
-    let url = "https://raw.githubusercontent.com/Barabasi-Lab/GroceryDB/main/data/GroceryDB_IgFPro.csv";
+    let url =
+        "https://raw.githubusercontent.com/Barabasi-Lab/GroceryDB/main/data/GroceryDB_IgFPro.csv";
     let file_path = "data/GroceryDB_IgFPro.csv";
     println!("Extracting data...");
     if let Err(e) = extract(url, file_path) {
@@ -23,8 +24,5 @@ fn main() {
     }
     if let Err(e) = delete_tb() {
         println!("Error: {}", e);
-}
-    
-    
-
+    }
 }

@@ -1,6 +1,6 @@
-use std::fs::File;
 use reqwest::blocking::get;
 use rusqlite::{params, Connection, Result};
+use std::fs::File;
 
 pub fn extract(url: &str, file_path: &str) -> Result<String, Box<dyn std::error::Error>> {
     let mut response = get(url)?;
@@ -13,7 +13,7 @@ pub fn load(dataset: &str) -> Result<String, Box<dyn std::error::Error>> {
     // Prints the full working directory and path
     println!("{:?}", std::env::current_dir().unwrap());
 
-    let mut payload = csv::ReaderBuilder::new()
+    let payload = csv::ReaderBuilder::new()
         .has_headers(true)
         .delimiter(b',')
         .from_path(dataset);
@@ -51,16 +51,9 @@ pub fn load(dataset: &str) -> Result<String, Box<dyn std::error::Error>> {
 
     for result in payload?.records() {
         let record = result?;
-        stmt.execute(&[
-            &record[0],
-            &record[1],
-            &record[2],
-            &record[3],
-            &record[4],
-            &record[5],
-            &record[6],
-            &record[7],
-            &record[8],
+        stmt.execute([
+            &record[0], &record[1], &record[2], &record[3], &record[4], &record[5], &record[6],
+            &record[7], &record[8],
         ])?;
     }
 
