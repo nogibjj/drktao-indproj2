@@ -20,13 +20,12 @@ As previously mentioned, the project extracts the grocery dataset from the given
 
 1. Create a codespace
 2. Install Rust using the following terminal command - `curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh`
-3. Use `cargo run` to build the Rust package and install the dependencies (reqwest, rusqlite, csv) from Cargo.toml. This command will also run `main.rs`.
+3. Use `cargo run` to build the Rust package and install the dependencies (reqwest, rusqlite, csv) from Cargo.toml. This command will also run `main.rs`, which performs the CRUD operations with appropriate error handling
 4. Run the tests using `make test`
 
 Below are logs of the successful CRUD operations, as well as successful tests
 
-Below is a log of successful CRUD database operations, as well as successful tests.
+![Alt text](main-run.png)
+![Alt text](rust-tests.png)
 
-![Alt text](data/CRUD.png)
-
-![Alt text](data/tests.png)
+It should also be noted that this project was written with the help of Github Copilot. The main use of Copilot was to translate the Python code from mini-project 5, which conducted very similar CRUD operations. Copilot helped to quickly rewrite the Python functions in Rust and build appropriate test functions. Another important feature of Copilot was ensuring that all necessary imports were made in each .rs file. 
