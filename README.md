@@ -1,9 +1,6 @@
-[![CI](https://github.com/nogibjj/drktao-week5mp-sql/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/drktao-week5mp-sql/actions/workflows/cicd.yml)[![CI](https://github.com/nogibjj/drktao-week5mp-sql/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/drktao-week5mp-sql/actions/workflows/cicd.yml)
-## SQL Project
-In this project, I created python scripts to connect to the `GroceryDB` database and perform CRUD operations. I have three scripts within the `lib` folder, which perform the following tasks:
-1. `extract.py` - extracts a dataset from a URL and creates a file path within the repo
-2. `transform_load.py` - transforms and loads the dataset into the local SQLite3 database
-3. `query.py` - performs a variety of queries on the database, including:
+[![Rust CI/CD](https://github.com/nogibjj/drktao-indproj2/actions/workflows/cicd.yml/badge.svg)](https://github.com/nogibjj/drktao-indproj2/actions/workflows/cicd.yml)
+## Individual Project 2
+In this project, I performed CRUD operations on an SQLite database using Rust. Specifically, 
 
         `create_db()` - creates a new table with column names if needed
         `read_db()` - displays rows of the data
