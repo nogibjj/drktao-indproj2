@@ -27,8 +27,9 @@ Below are logs of the successful CRUD operations, as well as successful tests
 
 ![Alt text](main-run.png)
 
-## Video Demo
-https://www.youtube.com/watch?v=wnm4sNBYeu8&t=39s
 ![Alt text](rust-tests.png)
 
 It should also be noted that this project was written with the help of Github Copilot. The main use of Copilot was to translate the Python code from mini-project 5, which conducted very similar CRUD operations. Copilot helped to quickly rewrite the Python functions in Rust and build appropriate test functions. Another important feature of Copilot was ensuring that all necessary imports were made in each .rs file. 
+
+## Video Demo
+https://www.youtube.com/watch?v=wnm4sNBYeu8&t=39s
